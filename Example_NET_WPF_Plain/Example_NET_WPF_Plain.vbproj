@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <RootNamespace>Example_NET_WPF_Plain</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+<PropertyGroup Condition="'$(PlatformTarget)' == 'x86'">
+  <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == ''">win-x86</RuntimeIdentifier>
+  <SelfContained Condition="'$(SelfContained)' == ''">false</SelfContained>
+</PropertyGroup>
+
+<PropertyGroup Condition="'$(PlatformTarget)' == 'x64'">
+  <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == ''">win-x64</RuntimeIdentifier>
+  <SelfContained Condition="'$(SelfContained)' == ''">false</SelfContained>
+</PropertyGroup>
+
+<PropertyGroup Condition="'$(PlatformTarget)' == 'arm64'">
+  <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == ''">win-arm64</RuntimeIdentifier>
+  <SelfContained Condition="'$(SelfContained)' == ''">false</SelfContained>
+</PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Windows" />
+    <Import Include="System.Windows.Controls" />
+    <Import Include="System.Windows.Data" />
+    <Import Include="System.Windows.Documents" />
+    <Import Include="System.Windows.Input" />
+    <Import Include="System.Windows.Media" />
+    <Import Include="System.Windows.Media.Imaging" />
+    <Import Include="System.Windows.Navigation" />
+    <Import Include="System.Windows.Shapes" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CefSharp.Wpf.NETCore" Version="114.2.100" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+</Project>
