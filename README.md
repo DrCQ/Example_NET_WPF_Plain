@@ -39,4 +39,9 @@ StackTrace:
 
    The VS Tooltip over the ChromiumWebBrowser shows: _Cannot load a reference assembly for execution_
 
+   ## Unexpected Behavior
+   Commenting the _CommandParameter_ of the 'Close' button is not raising the XAML Designer exception, but of cource the execution is not working (app is not closing).
+   
+ CommandParameter="{Binding Mode=OneWay, RelativeSource={RelativeSource AncestorType={x:Type local:MainWindow}}}"
+    
    
