@@ -1,5 +1,5 @@
 # NET WPF Application (XAML Designer Error)
-This is an simple NET7 - WPF application to show the XAML Designer error while using the CefSharp browser. Following Nuget packages are used:
+This is a simple NET7 - WPF application to show the XAML Designer error while using the CefSharp browser. Following Nuget packages are used:
 - CommunityToolkit.Mvvm (V8.2.0)
 - Microsoft.Extensions.DependencyInjection (V7.0.0)
 - CefSharp.Wpf.NETCore (V114.2.100)
